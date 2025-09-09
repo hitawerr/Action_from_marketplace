@@ -1,17 +1,16 @@
-name: Python application
+name: Python Syntax Check
 
 on: [push]
 
 jobs:
   build:
-  
     runs-on: ubuntu-latest
-    
-    steps:
-      - name: Check out the code
-      - uses: actions/checkout@v2
 
+    steps:
+      # Step 1: Check out the source code
+      - name: Check out the code
+        uses: actions/checkout@v2
+
+      # Step 2: Run Python syntax checker
       - name: Python Syntax Checker
-      - uses: cclauss/Find-Python-syntax-errors-action@v0.2.0
-          
-       
+        uses: cclauss/Find-Python-syntax-errors-action@v0.2.0
